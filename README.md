@@ -37,34 +37,33 @@ Name your database ar_furniture and set the collation to utf8mb4_unicode_ci, the
 
 Run the following SQL queries in the SQL tab to set up the necessary tables
 
-Populate it with your database and app configuration:
+Populate it with your database and app configuration
 
-Code snippet
-APP_NAME="AR Furniture Catalog"
-APP_URL="http://localhost/Yong_ArFurniture/ar-furniture"
-
-DB_HOST=localhost
-DB_NAME=ar_furniture
-DB_USER=root
-DB_PASS=
 How to Use the Website
 Part 1: Customer Storefront (Normal Version)
+<img width="1917" height="1145" alt="image" src="https://github.com/user-attachments/assets/572f9c68-626f-4ee4-9790-128759328690" />
+
 URL: http://localhost/Yong_ArFurniture/ar-furniture/index.php
 
 Features:
+<img width="1311" height="122" alt="image" src="https://github.com/user-attachments/assets/b872f087-7469-4aca-aaa7-6be13e1befe8" />
 
 Filter products by category using the filter buttons at the top.
+<img width="1917" height="917" alt="image" src="https://github.com/user-attachments/assets/b46f4542-dff3-445c-aace-1f789242b6aa" />
 
 Click "View in your space" on any product card to open the interactive 3D viewer (product.php).
+<img width="461" height="377" alt="image" src="https://github.com/user-attachments/assets/ced5ef32-2c7d-4555-ad42-b54a207fa54b" />
 
 On a desktop, scan the dynamic QR code using your phone camera to instantly load and test the Augmented Reality view on mobile.
 
 Part 2: Admin Dashboard (Admin Version)
 URL: http://localhost/Yong_ArFurniture/ar-furniture/admin/login.php
+<img width="852" height="617" alt="image" src="https://github.com/user-attachments/assets/c8624afc-1277-4147-9047-51b5893d4fcd" />
 
 Credentials: Username: admin | Password: password123
 
 Features:
+<img width="1917" height="995" alt="image" src="https://github.com/user-attachments/assets/c765fd3f-e4ae-40a0-8175-eb5449398f53" />
 
 Manage inventory, add new furniture products with custom 3D model files (.glb), edit details, or remove inactive products.
 
