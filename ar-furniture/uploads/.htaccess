@@ -1,0 +1,8 @@
+Deny from all
+<FilesMatch "\.(glb|usdz|jpg|jpeg|png|webp)$">
+    Allow from all
+</FilesMatch>
+<Files .env>
+    Order allow,deny
+    Deny from all
+</Files>
