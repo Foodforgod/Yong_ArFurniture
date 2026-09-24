@@ -35,47 +35,7 @@ Click on New in the left sidebar to create a database.
 
 Name your database ar_furniture and set the collation to utf8mb4_unicode_ci, then click Create.
 
-Run the following SQL queries in the SQL tab to set up the necessary tables:
-
-SQL
-CREATE TABLE categories (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    name VARCHAR(100) NOT NULL,
-    slug VARCHAR(100) NOT NULL UNIQUE,
-    sort_order INT DEFAULT 0,
-    is_active TINYINT(1) DEFAULT 1
-);
-
-CREATE TABLE products (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    category_id INT NOT NULL,
-    slug VARCHAR(150) NOT NULL UNIQUE,
-    name VARCHAR(150) NOT NULL,
-    description TEXT,
-    price DECIMAL(10,2) NOT NULL,
-    currency VARCHAR(10) DEFAULT 'RM',
-    glb_path VARCHAR(255) NOT NULL,
-    usdz_path VARCHAR(255) DEFAULT NULL,
-    thumb_path VARCHAR(255) DEFAULT NULL,
-    width_cm DECIMAL(6,2) DEFAULT NULL,
-    height_cm DECIMAL(6,2) DEFAULT NULL,
-    depth_cm DECIMAL(6,2) DEFAULT NULL,
-    is_active TINYINT(1) DEFAULT 1,
-    sort_order INT DEFAULT 0,
-    FOREIGN KEY (category_id) REFERENCES categories(id) ON DELETE RESTRICT
-);
-
-CREATE TABLE admins (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    username VARCHAR(50) NOT NULL UNIQUE,
-    password_hash VARCHAR(255) NOT NULL
-);
-
--- Insert a default admin account (Username: admin, Password: password123)
-INSERT INTO admins (username, password_hash) VALUES 
-('admin', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi');
-Step 3: Configure Environment Variables
-Create a file named .env in the root directory (ar-furniture/.env).
+Run the following SQL queries in the SQL tab to set up the necessary tables
 
 Populate it with your database and app configuration:
 
